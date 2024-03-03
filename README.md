@@ -1,3 +1,17 @@
-# Learn_Notes
+# 小康知家
 
-本仓库将会记录所有学习笔记，包括但不限于学习笔记，技术文章等
+## 产品概述
+
+xxxxxxxxxxx
+
+## 面向用户
+
+xxxxxxxxxx
+
+## 架构
+
+xxxxxxxxx
+
+## 特别鸣谢
+
+xxxxxxx
