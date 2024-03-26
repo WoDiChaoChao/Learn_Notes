@@ -7,7 +7,7 @@ using namespace std;
 
 class Person
 {
-	//分类
+//分类
 public:
 	//无参构造函数(默认构造函数)
 	Person() {
@@ -21,12 +21,12 @@ public:
 	Person(const Person& p) {
 		cout << "Person 拷贝构造函数" << endl;
 	}
-	//赋值构造函数
+	//拷贝赋值函数
 	Person& operator= (const Person& p) {
 		if (p._data == this->_data)
 			return *this;
 		this->_data = p._data;
-		cout << "Person 赋值构造函数" << endl;
+		cout << "Person 拷贝赋值" << endl;
 		return *this;
 	}
 	//移动构造函数
@@ -34,13 +34,21 @@ public:
 		this->_data = other._data;
 		cout << "Person 移动构造函数" << endl;
 	}
+
+	//移动赋值函数
+	Person& operator=(Person&& other) {
+		std::cout << "Person 移动赋值" << std::endl;
+		this->_data = other._data;
+		return *this;
+	}
+
 	~Person() {
 		cout << "Person 析构函数的调用" << endl;
 	}
 
 	int _data;
 private:
-
+	
 };
 
 //调用
@@ -70,7 +78,7 @@ void test01() {
 	p5._data = 10;
 	Person p6 = std::move(p5);
 	cout << p6._data << endl;
-}
+}	
 
 int main() {
 
